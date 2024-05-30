@@ -1,10 +1,10 @@
 from pprint import pprint
 from typing import Optional, Dict, Union, Any
 
-NestedDICT = Union[str, Dict[str, Any]]
+NestedDICT = Dict[str, Union[str, Dict[str, Any]]]
 
 
-def get_flat_dictionary(nested: Dict[str, NestedDICT],
+def get_flat_dictionary(nested: Optional[NestedDICT],
                         sep: str = '.',
                         parent: str = '',) -> Optional[Dict[str, str]]:
     """
